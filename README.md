@@ -25,7 +25,7 @@ COMMENT: As the Js task to use an API that I had in mind fell through, I am cons
 
 1. Sideoppsett og Struktur: []
 
-- Lag en enkel nettside med minst 3 forskjellige seksjoner (for eksempel: header, hovedinnhold, footer). []
+- Lag en enkel nettside med minst 3 forskjellige seksjoner (for eksempel: header, hovedinnhold, footer). [x]
 - Inkluder minst én knapp, én lenke og ett bilde på siden.[]
 
 2. Animation: []

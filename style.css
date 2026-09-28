@@ -1,0 +1,15 @@
+/* Css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #729672;
+  /* Forest green and blue hues for the main color theme as these colors are often used in all movies and posters by studio ghibli  */
+}
+
+.navBar {
+  background-color: #235123cd;
+}

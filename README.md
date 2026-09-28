@@ -80,9 +80,18 @@ For å sikre at du utfordrer deg selv, må prosjektet ditt inkludere en viss gra
 3. API-data som må kjøres gjennom en løkke for å hente/generere innhold.
    Prosjektet ditt må oppfylle minst **to** av disse kriteriene.
 
-Tips for gjennomføring
-Dokumentasjonen til de fleste offentlige API-er gir deg detaljer om hvordan du bruker dem, hvilke endepunkter de har, og hvilke parametere som aksepteres. Les dokumentasjonen nøye! 🤓
-Ikke bruk API-er som krever nøkkel (vi har ikke gått gjennom hvordan du sikrer API-nøkler ennå).
-Anbefalinger
+### Tips for gjennomføring
+
+- Dokumentasjonen til de fleste offentlige API-er gir deg detaljer om hvordan du bruker dem, hvilke endepunkter de har, og hvilke parametere som aksepteres. Les dokumentasjonen nøye! 🤓
+- Ikke bruk API-er som krever nøkkel (vi har ikke gått gjennom hvordan du sikrer API-nøkler ennå).
+
+#### Anbefalinger
+
 Dette er en perfekt anledning til å lage noe som kan skille seg ut i porteføljen din! Jeg anbefaler sterkt at du jobber med designet for å få prosjektet til å se flott ut.
 Tidligere studenter hos Kodehode har hatt suksess med å bruke API-er som dette for å lage spennende prosjekter.
+
+## My notes:
+
+- I want to create a little platform to easily search for ghibli movies, characters and perhaps also vehichles in/from the movies.
+- However as I am currently having some computer issues with opening specific folders, and way to high memory usage of cpu and gpu, I am unable to access the images I had in mind and am for now putting up a proof of concept with animations of placeholder images and design of the pages layout.
+- As the css task has a faster approaching deadline it works in my favor that I focus on the design and styling.

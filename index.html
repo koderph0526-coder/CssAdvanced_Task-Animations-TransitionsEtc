@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="style.css" />
     <title>Ghibli Forum - Css & Js ttask</title>
     <!-- Placeholder title for now -->
-    <!-- Add fitting favIcon when the direction is decided -->
+    <!-- favicon -->
+    <link rel="icon" href="./icons/torii-gate.png" />
   </head>
   <body>
     <header class="navBar">
@@ -20,14 +21,20 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h1>Welcome Ghibli friends!</h1>
-        <p>Looking for a movie to watch or have questions about a character?</p>
+      <section class="welcomeTxt flexColumn">
+        <h1 class="centerTxt">Welcome Ghibli friends!</h1>
+        <p class="centerTxt">
+          Looking for a movie to watch or have questions about a character?
+        </p>
       </section>
       <section class="searchBar">
-        <form action="">
-          <label for="">
-            <input type="text" placeholder="Search here!" />
+        <form action="" class="flexRow centerCenter">
+          <label for="" class="centerCenter">
+            <input
+              class="centerCenter"
+              type="text"
+              placeholder="Search here!"
+            />
           </label>
           <button>Click me!</button>
         </form>

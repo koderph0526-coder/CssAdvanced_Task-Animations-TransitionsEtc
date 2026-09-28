@@ -5,11 +5,43 @@
   box-sizing: border-box;
 }
 
+header {
+  height: 3rem;
+  background-image: linear-gradient(
+    #235123d2,
+    #477847cd,
+    #619361cd,
+    #729672
+  ); /*Is there a way to do this with just opacity perhaps?*/
+}
+
 body {
   background-color: #729672;
   /* Forest green and blue hues for the main color theme as these colors are often used in all movies and posters by studio ghibli  */
 }
+/* utility / reuse styling */
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.centerCenter {
+  align-items: center;
+  justify-content: center;
+}
+
+.centerTxt {
+  text-align: center;
+}
 
 .navBar {
-  background-color: #235123cd;
+}
+
+.welcomeTxt {
+  row-gap: 2rem;
+  margin-bottom: 1.5rem;
 }

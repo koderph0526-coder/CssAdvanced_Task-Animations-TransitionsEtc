@@ -94,4 +94,4 @@ Tidligere studenter hos Kodehode har hatt suksess med å bruke API-er som dette 
 
 - I want to create a little platform to easily search for ghibli movies, characters and perhaps also vehichles in/from the movies.
 - However as I am currently having some computer issues with opening specific folders, and way to high memory usage of cpu and gpu, I am unable to access the images I had in mind and am for now putting up a proof of concept with animations of placeholder images and design of the pages layout.
-- As the css task has a faster approaching deadline it works in my favor that I focus on the design and styling.
+- As the css task has a faster approaching deadline it works in my favor that I focus on the design and styling for now.

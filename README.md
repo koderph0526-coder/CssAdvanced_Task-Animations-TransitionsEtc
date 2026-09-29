@@ -26,11 +26,11 @@ COMMENT: As the Js task to use an API that I had in mind fell through, I am cons
 1. Sideoppsett og Struktur: []
 
 - Lag en enkel nettside med minst 3 forskjellige seksjoner (for eksempel: header, hovedinnhold, footer). [x]
-- Inkluder minst én knapp, én lenke og ett bilde på siden.[]
+- Inkluder minst én knapp, én lenke og ett bilde på siden.[x]
 
 2. Animation: []
 
-- Bruk CSS @keyframes for å animere minst ett element på siden. Animasjonen skal inkludere minst to eller tre trinn (bruk prosentverdier som 0%, 50%, 100%). []
+- Bruk CSS @keyframes for å animere minst ett element på siden. Animasjonen skal inkludere minst to eller tre trinn (bruk prosentverdier som 0%, 50%, 100%). [x]
 
 #### Eksempler på animasjoner:
 
@@ -92,6 +92,9 @@ Tidligere studenter hos Kodehode har hatt suksess med å bruke API-er som dette 
 
 ## My notes:
 
-- I want to create a little platform to easily search for ghibli movies, characters and perhaps also vehichles in/from the movies.
+- I want to create a little platform to easily search for ghibli movies, characters and perhaps also vehichles in/from the movies or possibly to show what movies was released/published during a specific year?
 - However as I am currently having some computer issues with opening specific folders, and way to high memory usage of cpu and gpu, I am unable to access the images I had in mind and am for now putting up a proof of concept with animations of placeholder images and design of the pages layout.
 - As the css task has a faster approaching deadline it works in my favor that I focus on the design and styling for now.
+- Will put the search function on hold and rather focus on getting two seperate buttons(one for movies one for characters) to fetch data via the API link from random movies and print it to html with preset css styling, as to display it like a card. This goives me a better opotunity to get the css right while also letting me practice using API and I'll return to making a search function that will print the matching searchresults as seperate cards accordingly.
+- I also want to add a button that asks if the used would like a full list of Ghibli movies, and when said button had been pressed and the list is printed I walso want js reveal another "button", in all honesty a selction/option field that allows the user to sort the movies alphabetically, by airing/release date and by length, as well as the reverse options for each of those sorting options
+- ! NOTE: I want to add an icon that's spinning slowly, I'm thinking a sakura flower or an umbrella, that only appear while the api is being asked to fetch data and print it.

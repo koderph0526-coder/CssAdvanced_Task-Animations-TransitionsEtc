@@ -49,9 +49,10 @@ img {
 
 .welcomeBanner {
   width: 4rem;
+  padding-top: 2rem;
 }
 
 .welcomeTxt {
   row-gap: 2rem;
-  margin-bottom: 1.5rem;
+  margin: 2rem 3rem;
 }

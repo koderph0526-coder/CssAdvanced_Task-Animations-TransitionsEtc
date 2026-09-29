@@ -44,12 +44,23 @@ img {
   justify-content: space-around;
 }
 
+/* Navigation styling */
 .navBar {
 }
 
-.welcomeBanner {
+.iconLink {
+  height: 70px;
+  width: 70px;
+}
+
+.welcomeBannerImg {
   width: 4rem;
-  padding-top: 2rem;
+  margin-top: 3rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.welcomeBannerImg:hover {
+  transform: scale(1.07);
 }
 
 .welcomeTxt {

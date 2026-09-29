@@ -6,7 +6,7 @@
 }
 
 header {
-  height: 3rem;
+  height: 3.5rem;
   background-image: linear-gradient(
     #235123d2,
     #477847cd,
@@ -18,6 +18,9 @@ header {
 body {
   background-color: #729672;
   /* Forest green and blue hues for the main color theme as these colors are often used in all movies and posters by studio ghibli  */
+}
+main {
+  height: 85vh;
 }
 img {
   width: 100%;
@@ -45,14 +48,15 @@ img {
 }
 
 /* Navigation styling */
-.navBar {
-}
+/* .navBar {
+} */
 
 .iconLink {
   height: 70px;
   width: 70px;
 }
 
+/*  */
 .welcomeBannerImg {
   width: 4rem;
   margin-top: 3rem;
@@ -66,4 +70,40 @@ img {
 .welcomeTxt {
   row-gap: 2rem;
   margin: 2rem 3rem;
+}
+
+.searchBar {
+  display: flex;
+  opacity: 0.2;
+  background-color: lightgrey;
+  width: 50vw;
+  height: 6rem;
+  margin-left: 25%;
+  border: 2px dotted grey;
+  border-radius: 20px;
+}
+
+.wipTxt {
+  margin-top: -1.8rem;
+  animation-name: txtFloat;
+  animation-duration: 3s;
+  /* animation-delay: 1s; */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes txtFloat {
+  from {
+    transform: translateY(4px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Footer styling */
+footer {
+  height: 3rem;
+  background-image: linear-gradient(#729672, #619361cd, #477847cd, #235123d2);
 }

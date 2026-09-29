@@ -54,19 +54,49 @@ img {
 .iconLink {
   height: 70px;
   width: 70px;
+  margin-top: 3rem;
 }
 
-/*  */
+/* styling effect on the icon images */
 .welcomeBannerImg {
   width: 4rem;
-  margin-top: 3rem;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+}
+.iconTxtAni {
+  opacity: 0;
+  width: 7rem;
+  margin-left: -1.5rem;
+  font-size: smaller;
+  transition: opacity 0.5s ease;
 }
 
+.floatingAni:hover .iconTxtAni {
+  opacity: 1;
+}
 .welcomeBannerImg:hover {
-  transform: scale(1.07);
+  transform: scale(1.1);
+  cursor: pointers;
+}
+/* styling to animate the castel as if it's floating. Add appearing text under it when hovered to explain what the link leads to */
+.floatingAni {
+  animation-name: howlsCastle;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
+@keyframes howlsCastle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .welcomeTxt {
   row-gap: 2rem;
   margin: 2rem 3rem;
@@ -86,7 +116,7 @@ img {
 .wipTxt {
   margin-top: -1.8rem;
   animation-name: txtFloat;
-  animation-duration: 3s;
+  animation-duration: 3.5s;
   /* animation-delay: 1s; */
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;

@@ -19,6 +19,9 @@ body {
   background-color: #729672;
   /* Forest green and blue hues for the main color theme as these colors are often used in all movies and posters by studio ghibli  */
 }
+img {
+  width: 100%;
+}
 /* utility / reuse styling */
 .flexRow {
   display: flex;
@@ -37,8 +40,15 @@ body {
 .centerTxt {
   text-align: center;
 }
+.spaceDisplay {
+  justify-content: space-around;
+}
 
 .navBar {
+}
+
+.welcomeBanner {
+  width: 4rem;
 }
 
 .welcomeTxt {

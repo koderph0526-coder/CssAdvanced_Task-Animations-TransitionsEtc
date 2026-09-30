@@ -6,7 +6,7 @@
 }
 
 header {
-  height: 3.5rem;
+  height: 10rem;
   background-image: linear-gradient(
     #235123d2,
     #477847cd,
@@ -19,9 +19,8 @@ body {
   background-color: #729672;
   /* Forest green and blue hues for the main color theme as these colors are often used in all movies and posters by studio ghibli  */
 }
-main {
-  height: 85vh;
-}
+/* main {
+} */
 img {
   width: 100%;
 }
@@ -99,39 +98,9 @@ img {
 }
 .welcomeTxt {
   row-gap: 2rem;
-  margin: 2rem 3rem;
+  margin: 3.5rem 4rem;
+  text-shadow: 0 0 8px whitesmoke;
 }
-
-.searchBar {
-  display: flex;
-  opacity: 0.2;
-  background-color: lightgrey;
-  width: 50vw;
-  height: 6rem;
-  margin-left: 25%;
-  border: 2px dotted grey;
-  border-radius: 20px;
-}
-
-.wipTxt {
-  margin-top: -1.8rem;
-  animation-name: txtFloat;
-  animation-duration: 3.5s;
-  /* animation-delay: 1s; */
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-}
-@keyframes txtFloat {
-  from {
-    transform: translateY(4px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 /* ading animation to second icon; a slow wiggle/waver */
 .waverAni:hover .iconTxtAni {
   opacity: 1;
@@ -164,6 +133,74 @@ img {
     transform: translateY(0px) translateX(0px);
   }
   /* Fix this to make it smooth and floating as if it's tracing the infinity symbol.*/
+}
+/* First Section - heroBanner  */
+.heroBannerImg {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 80vw;
+  height: 28rem;
+  /* background-image: url(./img/spiritedAway.jpg);
+  background-position: center; */
+  overflow-y: hidden;
+  border-radius: 20px;
+  /* attempting animation to swap images repeatedly */
+  animation-name: heroImg;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  background-image: url(./img/ghibliMuseumSign.jpg);
+}
+.heroBannerImg > img {
+  margin-top: -13rem;
+}
+@keyframe heroImg {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  /* Am still attempting to make it so that the images will smoothly swap places with eachother, seems I may need to either add both as background images or as tags and hide one that I reveal by changing the opacity with a leyframe animetion? */
+}
+
+/* .parallaxEffect {
+  position: fixed;
+  object-position:;
+}  */
+
+/* Second section - Search bar */
+
+.searchBar {
+  display: flex;
+  opacity: 0.2;
+  row-gap: 1rem;
+  background-color: lightgrey;
+  width: 50vw;
+  height: 8.5rem;
+  margin-left: 25%;
+  border: 2px dotted grey;
+  border-radius: 20px;
+}
+
+.wipTxt {
+  margin-top: -1.8rem;
+  animation-name: txtFloat;
+  animation-duration: 4.5s;
+  /* animation-delay: 3s; */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes txtFloat {
+  from {
+    transform: translateY(4px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* section 2 styling */
@@ -213,32 +250,44 @@ img {
   box-shadow: 4px 4px 6px #5c795c;
   background-color: #c2fbfb;
   border: 3px #5b7a7a solid;
+  cursor: pointer;
 }
 .btnTxtAni {
   transition: transform 3s;
 }
 .btnTxtAni:hover {
   animation-name: txtBtn;
-  animation-duration: 2s;
-  animation-delay: 0.2s;
+  animation-duration: 0.8s;
+  animation-delay: 0.1s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
+  transform: scale(1.1);
 }
 @keyframes txtBtn {
   0% {
-    transform: scale(1);
+    transform: scale(1.2);
   }
   50% {
-    transform: scale(1.1);
-    font-size: medium;
+    transform: scale(1.2);
+    font-size: 400;
     color: rgb(29, 66, 29);
-    transform: skew(-10deg);
+    transform: skew(-5deg);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }
 
 /* Footer styling */
 footer {
-  height: 3rem;
-  margin-top: 3rem;
+  height: 8rem;
+  margin-top: 2rem;
   background-image: linear-gradient(#729672, #619361cd, #477847cd, #235123d2);
+  row-gap: 0.5rem;
+}
+.lineBreak {
+  margin: 0.4rem 0;
+}
+footer > p {
+  text-shadow: 0 0 6px whiteSmoke;
 }

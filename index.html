@@ -15,13 +15,7 @@
   </head>
   <body>
     <header class="navBar">
-      <nav>
-        <figure><img src="./img/" alt="" /></figure>
-        <!-- Fix Img into img folder and make two or three of them swap as a header using animations and transitions, maybe have it slide into place when the page loads? -->
-      </nav>
-    </header>
-    <main>
-      <section class="spaceDisplay flexRow">
+      <nav class="spaceDisplay flexRow">
         <a
           class="iconLink floatingAni"
           href="https://www.ghibli.jp/"
@@ -36,9 +30,6 @@
         </a>
         <div class="welcomeTxt flexColumn">
           <h1 class="centerTxt">Welcome Ghibli-fond friends!</h1>
-          <p class="centerTxt">
-            Looking for a movie to watch or have questions about a character?
-          </p>
         </div>
         <a
           class="iconLink waverAni"
@@ -50,8 +41,21 @@
           </figure>
           <p class="iconTxtAni centerTxt centerCenter">Reddit chat forum</p>
         </a>
+      </nav>
+    </header>
+    <main>
+      <!-- Fix Img into img folder and make two or three of them swap as a header using animations and transitions, maybe have it slide into place when the page loads? -->
+      <section class="flexRow centerCenter">
+        <figure class="heroBannerImg">
+          <img class="parallaxEffect" src="./img/spiritedAway.jpg" alt="" />
+          <!-- Am working on this, it's not how I want it yet... See comment in css -->
+        </figure>
       </section>
-      <section class="searchBar centerCenter">
+      <!-- Searchbar in the works, need js to make it function! -->
+      <section class="searchBar centerCenter flexColumn">
+        <p class="centerTxt">
+          Looking for a movie to watch or have questions about a character?
+        </p>
         <form action="" class="flexRow centerCenter">
           <label for="" class="centerCenter">
             <input
@@ -79,22 +83,52 @@
         </div>
         <div class="btnsContainer flexRow">
           <!-- Add function with js to print relevant info to a div card -->
-          <button id="movieBtnRnd" class="randoBtn btnTxtAni">
-            Random Movie
+          <button id="movieBtnRnd" class="randoBtn">
+            <!-- I tried something, did not work. Will make another attempt tomorrow or clean this up. -->
+            <span class="btnTxtAni">Random Movie</span>
           </button>
           <button id="charBtnRnd" class="randoBtn btnTxtAni">
             Random Character
           </button>
         </div>
+        <!-- Add an img to animate, as a loading function, that is default display hidden and only displays when the buttons have been clicked -->
+        <figure>
+          <img src="" alt="" />
+        </figure>
+        <!-- Divs to print the images in, will need extra styling!! -->
         <div class="movieCardCont"></div>
         <div class="characterCardCont"></div>
       </section>
     </main>
-    <footer>
+    <footer class="flexColumn">
+      <!-- There's gotta be a better way to do this... -->
+      <p class="centerTxt lineBreak">
+        _____________________________________________________________________
+      </p>
       <!-- a thank you not to the user -->
+      <p class="centerTxt">Thank you so much for visiting my little page!</p>
       <!-- a cute little img with animation -->
       <!-- resource links -->
+      <p class="centerTxt">
+        In case you didn't spot it from the icons at the top, here is a link to
+        the Japanese
+        <a href="https://www.ghibli.jp/" target="_blank"
+          >Studio Ghibli Home page</a
+        >
+        and annother link to a
+        <a
+          href="https://www.reddit.com/r/ghibli/comments/1ejn50w/after_watching_every_studio_ghibli_film_these_are/"
+          target="_blank"
+          >reddit</a
+        >
+        chat page, where you can discuss all things related to Ghibli movies
+        with others.
+      </p>
       <!-- gitrepo -->
+      <p class="centerTxt">
+        Here's a link to the <a href="">GitHub Repo</a> for this page, in case
+        you'd like to have a look at how I coded this little chaos page :)
+      </p>
     </footer>
   </body>
 </html>

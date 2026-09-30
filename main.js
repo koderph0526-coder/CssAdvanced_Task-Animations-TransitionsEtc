@@ -20,5 +20,5 @@ async function ghibliMoviesData(urlFilm) {
 }
 
 //Set limit of movies to fetch width "https://ghibliapi.vercel.app/films?limit=250" --> Am asking for max, to keep in mind that they'll likely add more movies over time.
-// NOTE: This may be more complex than I thought, think I can do it
+// NOTE: This may be more complex than I thought, think I can do it at some point, but perhaps not in time for the deadline...
 // Logic work to get seach to function: fetch all films info, in this case title, store in a variable call allGhibliFilms and run the array throught a loop for each search to let it match the title.

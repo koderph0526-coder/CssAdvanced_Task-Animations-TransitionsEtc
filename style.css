@@ -144,6 +144,7 @@ img {
   animation-iteration-count: infinite;
 }
 @keyframes weavingFox {
+  /* did this to play around with/explore this type of animtion, will clean it up to be more like the floathing castle at some point */
   0% {
     transform: translateY(0) translateX(0);
   }

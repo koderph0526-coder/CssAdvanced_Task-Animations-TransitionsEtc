@@ -1,6 +1,10 @@
 // const ghibliUrl = "https://ghibliapi.vercel.app"; Documentation link for the API I'm using
 const urlFilms = "https://ghibliapi.vercel.app/films"; //Movies endpoint
 const urlGhibliPeople = "https://ghibliapi.vercel.app/people"; //People endpoint
+// Fetching html documents to manipulate/change here
+const movieBtnR = document.querySelector("#movieBtnRnd");
+const charBtnR = document.querySelector("#charBtnRnd");
+
 console.log(urlFilms);
 console.log(urlGhibliPeople);
 

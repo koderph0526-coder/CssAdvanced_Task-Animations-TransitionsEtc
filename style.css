@@ -201,14 +201,39 @@ img {
   width: 9rem;
   height: 2rem;
   background-color: #e6ffff;
+  border: 2px solid lightblue;
   border-radius: 10px;
   transition: transform 0.2s ease-in-out;
+  transition-property: background-color, border;
+  transition-duration: 0.3s;
 }
 
 .randoBtn:hover {
   transform: scale(1.1);
-  background-color: #c2fbfb;
   box-shadow: 4px 4px 6px #5c795c;
+  background-color: #c2fbfb;
+  border: 3px #5b7a7a solid;
+}
+.btnTxtAni {
+  transition: transform 3s;
+}
+.btnTxtAni:hover {
+  animation-name: txtBtn;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+@keyframes txtBtn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    font-size: medium;
+    color: rgb(29, 66, 29);
+    transform: skew(-10deg);
+  }
 }
 
 /* Footer styling */

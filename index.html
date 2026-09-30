@@ -16,7 +16,7 @@
   <body>
     <header class="navBar">
       <nav>
-        <figure><img src="" alt="" /></figure>
+        <figure><img src="./img/" alt="" /></figure>
         <!-- Fix Img into img folder and make two or three of them swap as a header using animations and transitions, maybe have it slide into place when the page loads? -->
       </nav>
     </header>
@@ -79,8 +79,12 @@
         </div>
         <div class="btnsContainer flexRow">
           <!-- Add function with js to print relevant info to a div card -->
-          <button class="randoBtn">Random Movie</button>
-          <button class="randoBtn">Random Character</button>
+          <button id="movieBtnRnd" class="randoBtn btnTxtAni">
+            Random Movie
+          </button>
+          <button id="charBtnRnd" class="randoBtn btnTxtAni">
+            Random Character
+          </button>
         </div>
         <div class="movieCardCont"></div>
         <div class="characterCardCont"></div>

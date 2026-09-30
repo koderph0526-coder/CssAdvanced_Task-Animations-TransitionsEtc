@@ -77,7 +77,7 @@ img {
   transform: scale(1.1);
   cursor: pointers;
 }
-/* styling to animate the castel as if it's floating. Add appearing text under it when hovered to explain what the link leads to */
+/* styling to animate the castle as if it's floating*/
 .floatingAni {
   animation-name: howlsCastle;
   animation-duration: 5s;
@@ -132,8 +132,87 @@ img {
   }
 }
 
+/* ading animation to second icon; a slow wiggle/waver */
+.waverAni:hover .iconTxtAni {
+  opacity: 1;
+}
+.waverAni {
+  animation-name: weavingFox;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes weavingFox {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(-3px) translateX(5px);
+  }
+  40% {
+    transform: translateY(-6px) translateX(5px);
+  }
+  60% {
+    transform: translateY(-3px) translateX(-5px);
+  }
+  80% {
+    transform: translateY(-6px) translateX(-5px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  /* Fix this to make it smooth and floating as if it's tracing the infinity symbol.*/
+}
+
+/* section 2 styling */
+.breakCloud {
+  margin-top: 2rem;
+  width: 150px;
+  animation-name: cloudSway;
+  animation-duration: 10s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cloudSway {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* buttons styling */
+.btnsContainer {
+  margin: 3rem 0;
+  width: 400px;
+  justify-content: space-around;
+}
+.randoBtn {
+  width: 9rem;
+  height: 2rem;
+  background-color: #e6ffff;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.randoBtn:hover {
+  transform: scale(1.1);
+  background-color: #c2fbfb;
+  box-shadow: 4px 4px 6px #5c795c;
+}
+
 /* Footer styling */
 footer {
   height: 3rem;
+  margin-top: 3rem;
   background-image: linear-gradient(#729672, #619361cd, #477847cd, #235123d2);
 }

@@ -79,7 +79,7 @@ img {
 /* styling to animate the castle as if it's floating*/
 .floatingAni {
   animation-name: howlsCastle;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-delay: 2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -136,6 +136,7 @@ img {
 }
 /* First Section - heroBanner  */
 .heroBannerImg {
+  opacity: 1;
   margin-top: 1rem;
   margin-bottom: 2rem;
   width: 80vw;
@@ -146,24 +147,25 @@ img {
   border-radius: 20px;
   /* attempting animation to swap images repeatedly */
   animation-name: heroImg;
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-timing-function: ease-in-out;
-  animation-delay: 3s;
-  animation-iteration-count: infinite;
-  background-image: url(./img/ghibliMuseumSign.jpg);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  /* background-image: url(./img/ghibliMuseumSign.jpg);  --> Work out how to swap images with animations, perhaps add a small */
 }
 .heroBannerImg > img {
   margin-top: -13rem;
 }
-@keyframe heroImg {
-  0% {
-    opacity: 1;
-  }
-  50% {
+
+@keyframes heroImg {
+  from {
     opacity: 0;
   }
-  /* Am still attempting to make it so that the images will smoothly swap places with eachother, seems I may need to either add both as background images or as tags and hide one that I reveal by changing the opacity with a leyframe animetion? */
+  to {
+    opacity: 1;
+  }
 }
+/* Am still attempting to make it so that the images will smoothly swap places with eachother, seems I may need to either add both as background images or as tags and hide one that I reveal by changing the opacity with a leyframe animetion? */
 
 /* .parallaxEffect {
   position: fixed;
@@ -171,7 +173,6 @@ img {
 }  */
 
 /* Second section - Search bar */
-
 .searchBar {
   display: flex;
   opacity: 0.2;
@@ -204,6 +205,21 @@ img {
 }
 
 /* section 2 styling */
+/* The card that appears from the search function and button being clicked.*/
+.searchCard {
+  display: none; /* I'll swap this to be the available styling in html once I'm done with the design*/
+}
+.searchResCard {
+  background-color: #c5ecf9;
+  margin: 3rem 0;
+  width: 20rem;
+  height: 28rem;
+  border: 2px solid steelblue;
+  border-radius: 10px;
+}
+/* Going to input extra styling for the items that I'll append form the API  below. */
+
+/* A little visual break from the searchBar to the buttons. */
 .breakCloud {
   margin-top: 2rem;
   width: 150px;
@@ -279,16 +295,16 @@ img {
 }
 
 /* Footer styling */
-footer {
-  height: 9rem;
-  margin-top: 2rem;
-  padding: 1rem 4rem;
-  background-image: linear-gradient(#729672, #619361cd, #477847cd, #235123d2);
-  row-gap: 0.5rem;
-}
 .lineBreak {
   margin: 0.4rem 0;
 }
+footer {
+  margin-top: 2rem;
+  padding: 1rem 1rem;
+  background-image: linear-gradient(#729672, #619361cd, #477847cd, #235123d2);
+  row-gap: 0.5rem;
+}
 footer > p {
   text-shadow: 0 0 6px whiteSmoke;
+  padding: 1rem 3rem;
 }

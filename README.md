@@ -98,3 +98,10 @@ Tidligere studenter hos Kodehode har hatt suksess med å bruke API-er som dette 
 - Will put the search function on hold and rather focus on getting two seperate buttons(one for movies one for characters) to fetch data via the API link from random movies and print it to html with preset css styling, as to display it like a card. This goives me a better opotunity to get the css right while also letting me practice using API and I'll return to making a search function that will print the matching searchresults as seperate cards accordingly.
 - I also want to add a button that asks if the used would like a full list of Ghibli movies, and when said button had been pressed and the list is printed I walso want js reveal another "button", in all honesty a selction/option field that allows the user to sort the movies alphabetically, by airing/release date and by length, as well as the reverse options for each of those sorting options
 - ! NOTE: I want to add an icon that's spinning slowly, I'm thinking a sakura flower or an umbrella, that only appear while the api is being asked to fetch data and print it.
+
+## Must do!:
+
+- Comments!!!!
+- Add description to img!
+- Clean up css -> DRY; DRY; DRY!!
+- FIx the JS and append!!

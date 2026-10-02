@@ -1,5 +1,5 @@
 // const ghibliUrl = "https://ghibliapi.vercel.app"; Documentation link for the API I'm using
-const url = "https://ghibliapi.vercel.app/films/"; //Movies endpoint
+const url = "https://ghibliapi.vercel.app/films"; //Movies endpoint
 const urlGhibliPeople = "https://ghibliapi.vercel.app/people"; //People endpoint
 // Fetching html documents to manipulate/change here
 const movieBtnR = document.querySelector("#movieBtnRnd");
@@ -22,7 +22,7 @@ function movieFetch() {
   ghibliMoviesData();
 }
 
-async function ghibliMoviesData(url, i) {
+async function ghibliMoviesData(url) {
   // try {
   //   fetch(urlFilm)
   //     .then((res) => res.json())
@@ -31,9 +31,11 @@ async function ghibliMoviesData(url, i) {
   // } catch (err) {
   //   console.error(err);
   // }
-  const res = await fetch(url + i);
+  const res = await fetch(url);
   const data = await res.json();
-  movie = await data;
+  films.forEach((film) => {
+    console.log(`${film.title} `);
+  });
 }
 ghibliMoviesData(url);
 

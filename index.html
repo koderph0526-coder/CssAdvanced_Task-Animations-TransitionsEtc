@@ -14,7 +14,7 @@
     <link rel="icon" href="./icons/torii-gate.png" />
   </head>
   <body>
-    <header class="navBar">
+    <header>
       <nav class="spaceDisplay flexRow">
         <a
           class="iconLink floatingAni"
@@ -57,14 +57,16 @@
           Looking for a movie to watch or have questions about a character?
         </p>
         <form action="" class="flexRow centerCenter">
-          <label for="" class="centerCenter">
-            <input
-              class="centerCenter"
-              type="text"
-              placeholder="Search here!"
-            />
-          </label>
-          <button>Click me!</button>
+          <fieldset disabled>
+            <label for="" class="centerCenter">
+              <input
+                class="centerCenter"
+                type="text"
+                placeholder="Search here!"
+              />
+            </label>
+            <button class="searchBtn">Click me!</button>
+          </fieldset>
         </form>
       </section>
       <!-- I'm putting the <p> outside of the section as it's here temporarily -->
@@ -73,8 +75,20 @@
       </p>
       <section class="flexColumn centerCenter">
         <!-- div to push information, fetched via api link, from js to -->
-        <div class="searchResCard flexColumn"></div>
-        <div class="flexColumn centerCenter">
+        <div class="searchCard flexColumn"></div>
+        <div class="cloudsDiv flexRow centerCenter">
+          <figure class="breakCloud">
+            <img
+              src="./icons/cloudBlue.png"
+              alt="a little cartoon like cloud with a blue hue to it"
+            />
+          </figure>
+          <figure class="breakCloud">
+            <img
+              src="./icons/cloudBlue.png"
+              alt="a little cartoon like cloud with a blue hue to it"
+            />
+          </figure>
           <figure class="breakCloud">
             <img
               src="./icons/cloudBlue.png"
@@ -97,18 +111,18 @@
           <img src="" alt="" />
         </figure>
         <!-- Divs to print the images in, will need extra styling!! -->
-        <div class="movieCardCont"></div>
-        <div class="characterCardCont"></div>
+        <div class="movieCardCont randoResCard flexColumn"></div>
+        <div class="characterCardCont randoResCard flexColumn"></div>
       </section>
     </main>
-    <footer class="flexColumn">
-      <!-- There's gotta be a better way to do this... -->
-      <p class="centerTxt lineBreak">
-        _____________________________________________________________________
+    <footer class="flexColumn centerCenter">
+      <!-- There's gotta be a better way to do this... > Yes, div instead and border with no width?-->
+      <div class="centerCenter lineBreak"></div>
+      <!-- a thank you note to the user -->
+      <p class="centerTxt tnxTxt">
+        Thank you so much for visiting my little page!
       </p>
-      <!-- a thank you not to the user -->
-      <p class="centerTxt">Thank you so much for visiting my little page!</p>
-      <!-- a cute little img with animation -->
+      <!-- a cute little img with animation? -->
       <!-- resource links -->
       <p class="centerTxt">
         In case you didn't spot it from the icons at the top, here is a link to
@@ -116,7 +130,7 @@
         <a href="https://www.ghibli.jp/" target="_blank"
           >Studio Ghibli Home page</a
         >
-        and annother link to a
+        and another link to a
         <a
           href="https://www.reddit.com/r/ghibli/comments/1ejn50w/after_watching_every_studio_ghibli_film_these_are/"
           target="_blank"

@@ -322,3 +322,20 @@ footer > p {
 .tnxTxt {
   font-size: larger;
 }
+
+/* Display media queries css! */
+/* Tablet */
+@media (max-width: 1024px) {
+  .heroBannerImg {
+    width: 75%;
+    height: 22rem;
+  }
+  .heroBannerImg > img {
+    margin-top: -5rem;
+  }
+  .lineBreak {
+    width: 70%;
+  }
+}
+
+/* Next fix phone css! */

@@ -19,16 +19,16 @@ COMMENT: As the Js task to use an API that I had in mind fell through, I am cons
 ### Goal CCC Assignment:
 
 "Målet med denne oppgaven er å hjelpe deg å øve på å bruke CSS-animation, Transition og transform for å lage interaktive og visuelt tiltalende elementer på en nettside. Du vil bruke kreativiteten din og de CSS-teknikkene du har lært til å designe en engasjerende layout eller interaktiv komponent."
-( ---> Yeh yeh, I'll translate it later >.<, prefer doing most coding in English, if ya'll don't mind. Also Have half a mind to combine this and the Js task about API...)
+( ---> Yeh yeh, I'll translate it later >.<, prefer doing most coding in English, if ya'll don't mind. Also have half a mind to combine this and the Js task about API. Did indeed combine them)
 
 ### Krav til oppgaven:
 
-1. Sideoppsett og Struktur: []
+1. Sideoppsett og Struktur: [x]
 
 - Lag en enkel nettside med minst 3 forskjellige seksjoner (for eksempel: header, hovedinnhold, footer). [x]
 - Inkluder minst én knapp, én lenke og ett bilde på siden.[x]
 
-2. Animation: []
+2. Animation: [x]
 
 - Bruk CSS @keyframes for å animere minst ett element på siden. Animasjonen skal inkludere minst to eller tre trinn (bruk prosentverdier som 0%, 50%, 100%). [x]
 
@@ -38,10 +38,10 @@ COMMENT: As the Js task to use an API that I had in mind fell through, I am cons
 - En tekst som fader inn og beveger seg.
 - En knapp som endrer farge og skaleres når den hovres på.
 
-3. Transition: []
+3. Transition: [x]
 
-- Legg til jevne Transition på elementer som knapper, lenker eller bilder. []
-- Bruk transition for å lage effekter ved hover eller når et element får fokus (for eksempel endre bakgrunnsfarge, endre størrelse). []
+- Legg til jevne Transition på elementer som knapper, lenker eller bilder. [x]
+- Bruk transition for å lage effekter ved hover eller når et element får fokus (for eksempel endre bakgrunnsfarge, endre størrelse). [x]
 
 #### Eksempler på Transitions:
 
@@ -49,10 +49,10 @@ COMMENT: As the Js task to use an API that I had in mind fell through, I am cons
 - Skaler et bilde jevnt når brukeren hovrer på det.
 - En tekstblokk som endrer opasitet når brukeren hovrer på den.
 
-4. Transform: []
+4. Transform: [x]
 
-- Bruk CSS-transformasjoner på minst ett element. []
-- Bruk rotate, scale, translate eller skew for å få elementet til å bevege seg eller endre størrelse eller orientering. []
+- Bruk CSS-transformasjoner på minst ett element. [x]
+- Bruk rotate, scale, translate eller skew for å få elementet til å bevege seg eller endre størrelse eller orientering. [x]
 
 #### Eksempler på transformasjoner:
 
@@ -60,10 +60,10 @@ COMMENT: As the Js task to use an API that I had in mind fell through, I am cons
 - Få et bilde til å zoome inn når brukeren hovrer på det.
 - Skew (skjev) en tittel eller overskrift for å gi en 3D-effekt.
 
-5. Kombinere Animation, Transition og Transform:
+5. Kombinere Animation, Transition og Transform: [x]
 
-- Prøv å kombinere animasjoner, overganger og transformasjoner på ett element.[]
-- For eksempel kan en knapp skalere opp og endre farge når brukeren hovrer på den, og teksten inni kan også animere med en fade-in effekt ved hjelp av keyframes.[]
+- Prøv å kombinere animasjoner, overganger og transformasjoner på ett element.[x]
+- For eksempel kan en knapp skalere opp og endre farge når brukeren hovrer på den, og teksten inni kan også animere med en fade-in effekt ved hjelp av keyframes.[x]
 
 ### Bonusutfordring (Valgfritt):
 
@@ -71,14 +71,15 @@ Lag et interaktivt meny- eller kort-design som bruker en kombinasjon av animasjo
 
 ## JS tasks:
 
-### Krav til oppgaven:
+### Krav til oppgaven: []
 
 For å sikre at du utfordrer deg selv, må prosjektet ditt inkludere en viss grad av kompleksitet, for eksempel:
 
-1. Et API med flere ulike endepunkter som du bruker i prosjektet ditt.
-2. Et API med et endepunkt som aksepterer parametere i URL-en.
-3. API-data som må kjøres gjennom en løkke for å hente/generere innhold.
-   Prosjektet ditt må oppfylle minst **to** av disse kriteriene.
+1. Et API med flere ulike endepunkter som du bruker i prosjektet ditt. []
+2. Et API med et endepunkt som aksepterer parametere i URL-en. []
+3. API-data som må kjøres gjennom en løkke for å hente/generere innhold. []
+
+Prosjektet ditt må oppfylle minst **to** av disse kriteriene.
 
 ### Tips for gjennomføring
 
@@ -96,7 +97,7 @@ Tidligere studenter hos Kodehode har hatt suksess med å bruke API-er som dette 
 - However as I am currently having some computer issues with opening specific folders, and way to high memory usage of cpu and gpu, I am unable to access the images I had in mind and am for now putting up a proof of concept with animations of placeholder images and design of the pages layout.
 - As the css task has a faster approaching deadline it works in my favor that I focus on the design and styling for now.
 - Will put the search function on hold and rather focus on getting two seperate buttons(one for movies one for characters) to fetch data via the API link from random movies and print it to html with preset css styling, as to display it like a card. This goives me a better opotunity to get the css right while also letting me practice using API and I'll return to making a search function that will print the matching searchresults as seperate cards accordingly.
-- I also want to add a button that asks if the used would like a full list of Ghibli movies, and when said button had been pressed and the list is printed I walso want js reveal another "button", in all honesty a selction/option field that allows the user to sort the movies alphabetically, by airing/release date and by length, as well as the reverse options for each of those sorting options
+- I also want to add a button that asks if the used would like a full list of Ghibli movies, and when said button had been pressed and the list is printed I also want js reveal another "button", in all honesty a selction/option field that allows the user to sort the movies alphabetically, by airing/release date and by length, as well as the reverse options for each of those sorting options
 - ! NOTE: I want to add an icon that's spinning slowly, I'm thinking a sakura flower or an umbrella, that only appear while the api is being asked to fetch data and print it.
 
 ## Must do!:
@@ -104,4 +105,4 @@ Tidligere studenter hos Kodehode har hatt suksess med å bruke API-er som dette 
 - Comments!!!!
 - Add description to img!
 - Clean up css -> DRY; DRY; DRY!!
-- FIx the JS and append!!
+- Fix the JS and append!!

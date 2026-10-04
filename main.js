@@ -33,13 +33,18 @@ async function ghibliMoviesData(url) {
   // }
   const res = await fetch(url);
   const data = await res.json();
+  const films = await data.json();
   films.forEach((film) => {
     console.log(`${film.title} `);
   });
 }
 ghibliMoviesData(url);
 
-movieBtnR.addEventListener("click", (e) => {});
+let createCard; //A variable to store the fetched data in once I manage to fetch it.
+
+movieBtnR.addEventListener("click", (e) => {
+  createCard.forEach(film);
+});
 
 //Set limit of movies to fetch width "https://ghibliapi.vercel.app/films?limit=250" --> Am asking for max, to keep in mind that they'll likely add more movies over time.
 // NOTE: This may be more complex than I thought, think I can do it at some point, but perhaps not in time for the deadline...

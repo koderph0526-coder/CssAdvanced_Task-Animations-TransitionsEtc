@@ -298,6 +298,10 @@ img {
   }
 }
 
+.loadingIcon {
+  /* Add styling for loading icon */
+}
+
 /* Card styling for the card that appears when random movie and character buttons are clicked */
 .randoResCard {
   background-color: #c5ecf9;

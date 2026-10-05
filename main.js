@@ -11,9 +11,16 @@ const randMovContCard = document.querySelector(".movieCardCont");
 let movie;
 
 movieBtnR.addEventListener("click", (e) => {
-  ghibliMoviesData(url);
   // Adjusting a set loadingtime that also allows for a loading icon to be displayed
-  setTimeout(() => {}, 4000); // Setting it to load for 4 seconds
+  // think easiest thing to do is load the element with a class toggle to the display + rotating class with a setTimeout for 3.5s
+  setTimeout(() => {
+    ghibliMoviesData(url);
+    const createCard = {}; // Had to make this into an empty array to place the items into
+    createCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.
+    // createCard.append(randMovContCard);
+    // const randomMovIndex = Math.floor(Math.random() * films.length);
+    // const randomMovie = [randomMovIndex];
+  }, 4000); // Setting it to load for 4 seconds
 });
 
 async function ghibliMoviesData(url) {
@@ -26,8 +33,6 @@ async function ghibliMoviesData(url) {
       console.log(`${film.title} `);
       console.log(`${film.original_title}`); //mainly just checking that it now has acces to all data requested from this endpoint
     });
-    const createCard = {}; // Had to make this into an empty array
-    createCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.
     films.forEach((film) => {
       const divCont = document.createElement("div");
       divCont["className"] = "randoResCard";
@@ -39,6 +44,7 @@ async function ghibliMoviesData(url) {
       const jpnTitleTxt = document.createTextNode(film.original_title);
       jpnTitle.append(jpnTitleTxt);
       const imgM = document.createElement("img");
+      imgM[films.image];
       const figure = document.createElement("figure");
       figure.append(imgM);
       const movieDescript = document.createElement("p");
@@ -46,8 +52,8 @@ async function ghibliMoviesData(url) {
       const runTime = document.createElement("p");
 
       divCont.appendChild(engTitle);
+      divCont.appendChild(jpnTitle);
       randMovContCard.append(divCont);
-      // createCard.push(film);
     });
   } catch (err) {
     console.error(err);

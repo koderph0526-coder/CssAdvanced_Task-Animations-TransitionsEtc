@@ -208,9 +208,6 @@ img {
 
 /* section 2 styling */
 /* The card that appears from the search function and button being clicked.*/
-.searchCard {
-  display: none; /* I'll swap this to be the available styling in html once I'm done with the design*/
-}
 .searchResCard {
   background-color: #c5ecf9;
   margin: 3rem 0;
@@ -299,6 +296,16 @@ img {
   100% {
     transform: scale(1.2);
   }
+}
+
+/* Card styling for the card that appears when random movie and character buttons are clicked */
+.randoResCard {
+  background-color: #c5ecf9;
+  margin: 3rem 0;
+  width: 21rem;
+  height: 28rem;
+  border: 2px solid steelblue;
+  border-radius: 10px;
 }
 
 /* Footer styling */

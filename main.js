@@ -4,48 +4,59 @@ const urlGhibliPeople = "https://ghibliapi.vercel.app/people"; //People endpoint
 // Fetching html documents to manipulate/change here
 const movieBtnR = document.querySelector("#movieBtnRnd");
 const charBtnR = document.querySelector("#charBtnRnd");
+const randMovContCard = document.querySelector(".movieCardCont");
 
 // console.log(urlFilms);
 // console.log(urlGhibliPeople);
 let movie;
 
-movieBtnR.addEventListener("click", async (e) => {
-  const res = await fetch(url);
-  const data = await res.json();
-  const films = await data;
-  films.forEach((film) => {
-    console.log(`${film.title} `);
-    console.log(`${film.original_title}`); //mainly just checking that it now has acces to all data requested from this endpoint
-  });
+movieBtnR.addEventListener("click", (e) => {
+  ghibliMoviesData(url);
   // Adjusting a set loadingtime that also allows for a loading icon to be displayed
-  setTimeout(() => {
-    createCard.forEach(film);
-  }, 4000); // Setting it to load for 4 seconds
+  setTimeout(() => {}, 4000); // Setting it to load for 4 seconds
 });
+
 async function ghibliMoviesData(url) {
-  // try {
-  //   fetch(urlFilm)
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data))
-  //     .finally(console.log("Found Api"));
-  // } catch (err) {
-  //   console.error(err);
-  // }
+  // let randomFilm = Math.floor(Math.random);
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    const films = await data;
+    films.forEach((film) => {
+      console.log(`${film.title} `);
+      console.log(`${film.original_title}`); //mainly just checking that it now has acces to all data requested from this endpoint
+    });
+    let createCard;
+    createCard.className = "centerCenter";
+    films.forEach((film) => {
+      const divCont = document.createElement("div");
+      divCont.className = "randoResCard";
+      const engTitle = document.createElement("h2");
+      const engTitleTxt = document.createTextNode(film.title);
+      engTitle.append(engTitleTxt);
+      console.log(engTitle);
+      const jpnTitle = document.createElement("h3");
+      const jpnTitleTxt = document.createTextNode(film.original_title);
+      const imgM = document.createElement("img");
+      const figure = document.createElement("figure");
+      figure.append(imgM);
+      const movieDescript = document.createElement("p");
+      const releaseD = document.createElement("p");
+      const runTime = document.createElement("p");
+
+      divCont.appendChild(engTitle);
+      randMovContCard.append(divCont);
+      // createCard.push(film);
+    });
+  } catch (err) {
+    console.error(err);
+  }
 }
 function movieFetch(url) {
   ghibliMoviesData(url);
-  const engTitle = document.createElement("h2");
-  engTitle.textContent = "";
-  console.log(engTitle);
-  const jpnTitle = document.createElement("h3");
-  jpnTitle.textContent = "";
-  const imgM = document.createElement("img");
-  const releaseD = document.createElement("p");
-  const runTime = document.createElement("p");
-  const movieDescript = document.createElement("p");
 }
-ghibliMoviesData(url);
-movieFetch(url);
+// ghibliMoviesData(url);
+// movieFetch(url);
 let createCard; //A variable to store the fetched data in once I manage to fetch it.
 
 //Set limit of movies to fetch width "https://ghibliapi.vercel.app/films?limit=250" --> Am asking for max, to keep in mind that they'll likely add more movies over time.

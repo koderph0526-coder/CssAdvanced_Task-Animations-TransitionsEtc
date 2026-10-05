@@ -26,17 +26,18 @@ async function ghibliMoviesData(url) {
       console.log(`${film.title} `);
       console.log(`${film.original_title}`); //mainly just checking that it now has acces to all data requested from this endpoint
     });
-    let createCard;
-    createCard.className = "centerCenter";
+    const createCard = {}; // Had to make this into an empty array
+    createCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.
     films.forEach((film) => {
       const divCont = document.createElement("div");
-      divCont.className = "randoResCard";
+      divCont["className"] = "randoResCard";
       const engTitle = document.createElement("h2");
       const engTitleTxt = document.createTextNode(film.title);
       engTitle.append(engTitleTxt);
       console.log(engTitle);
       const jpnTitle = document.createElement("h3");
       const jpnTitleTxt = document.createTextNode(film.original_title);
+      jpnTitle.append(jpnTitleTxt);
       const imgM = document.createElement("img");
       const figure = document.createElement("figure");
       figure.append(imgM);

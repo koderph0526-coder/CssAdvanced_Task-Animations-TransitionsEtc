@@ -15,9 +15,6 @@ movieBtnR.addEventListener("click", (e) => {
   // think easiest thing to do is load the element with a class toggle to the display + rotating class with a setTimeout for 3.5s
   setTimeout(() => {
     ghibliMoviesData(url);
-    const createCard = {}; // Had to make this into an empty array to place the items into
-    createCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.
-    // createCard.append(randMovContCard);
     // const randomMovIndex = Math.floor(Math.random() * films.length);
     // const randomMovie = [randomMovIndex];
   }, 4000); // Setting it to load for 4 seconds
@@ -30,7 +27,7 @@ async function ghibliMoviesData(url) {
     const data = await res.json();
     const films = await data;
     films.forEach((film) => {
-      console.log(`${film.title} `);
+      // console.log(`${film.title} `);
       console.log(`${film.original_title}`); //mainly just checking that it now has acces to all data requested from this endpoint
     });
     films.forEach((film) => {
@@ -39,22 +36,42 @@ async function ghibliMoviesData(url) {
       const engTitle = document.createElement("h2");
       const engTitleTxt = document.createTextNode(film.title);
       engTitle.append(engTitleTxt);
-      console.log(engTitle);
       const jpnTitle = document.createElement("h3");
       const jpnTitleTxt = document.createTextNode(film.original_title);
       jpnTitle.append(jpnTitleTxt);
       const imgM = document.createElement("img");
-      imgM[films.image];
+      imgM[films.image]; //No?
       const figure = document.createElement("figure");
       figure.append(imgM);
       const movieDescript = document.createElement("p");
+      const movDescrTxt = document.createTextNode(film.description);
+      movieDescript.append(movDescrTxt);
       const releaseD = document.createElement("p");
+      const releaseDtxt = document.createTextNode(
+        `Release year: ${film.release_date}`,
+      );
+      releaseD.append(releaseDtxt);
       const runTime = document.createElement("p");
+      const runTtxt = document.createTextNode(
+        `Run-time: ${film.running_time} minutes`,
+      );
+      runTime.append(runTtxt);
 
       divCont.appendChild(engTitle);
       divCont.appendChild(jpnTitle);
+      divCont.appendChild(figure);
+      divCont.appendChild(movieDescript);
+      divCont.appendChild(releaseD);
+      divCont.appendChild(runTime);
       randMovContCard.append(divCont);
     });
+    const createCard = {}; // Had to make this into an empty array to place the items into
+    createCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.
+    // createCard.append(randMovContCard);
+    // still attempting to get just one random movie card to print when the button is clicked
+    let randmoizer = Math.floor(Math.random() * films.length);
+    let randomMovCard = randMovContCard[randmoizer];
+    return randomMovCard;
   } catch (err) {
     console.error(err);
   }

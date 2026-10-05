@@ -310,6 +310,7 @@ img {
   height: 28rem;
   border: 2px solid steelblue;
   border-radius: 10px;
+  padding: 0.6rem;
 }
 
 /* Footer styling */

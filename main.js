@@ -12,12 +12,29 @@ let movie;
 
 movieBtnR.addEventListener("click", (e) => {
   // Adjusting a set loadingtime that also allows for a loading icon to be displayed
+  const flowerCont = document.querySelector("#flowerSpin"); //fetching the tag I want to append the created js element into
+  // creating the img element and adding a class that also has keyframe animation attached
+  const loadingImg = document.createElement("img");
+  loadingImg.src = "/icons/sakura.png";
+  loadingImg.className = "loadSpin";
+  //Adding text
+  const loadTxt = document.createElement("p");
+  const loadingTxt = document.createTextNode("Loading, please wait");
+  loadTxt.append(loadingTxt);
+  flowerCont.append(loadingImg);
+  flowerCont.append(loadTxt);
+  setTimeout(() => {
+    // loadingImg.classList.remove("loadSpin");
+    flowerCont.remove(loadingImg);
+    flowerCont.remove(loadTxt);
+  }, 2800); // removing the loading icon on a set time
+
   // think easiest thing to do is load the element with a class toggle to the display + rotating class with a setTimeout for 3.5s
   setTimeout(() => {
     ghibliMoviesData(url);
     // const randomMovIndex = Math.floor(Math.random() * films.length);
     // const randomMovie = [randomMovIndex];
-  }, 4000); // Setting it to load for 4 seconds
+  }, 3000); // Setting it to load for 4 seconds for now, will probably shorten it once I see how much time I need for my little loading animation
 });
 
 async function ghibliMoviesData(url) {
@@ -40,7 +57,8 @@ async function ghibliMoviesData(url) {
       const jpnTitleTxt = document.createTextNode(film.original_title);
       jpnTitle.append(jpnTitleTxt);
       const imgM = document.createElement("img");
-      imgM[films.image]; //No?
+      imgM[film.url.image]; //No?
+      // console.log(imgM);
       const figure = document.createElement("figure");
       figure.append(imgM);
       const movieDescript = document.createElement("p");
@@ -76,9 +94,9 @@ async function ghibliMoviesData(url) {
     console.error(err);
   }
 }
-function movieFetch(url) {
-  ghibliMoviesData(url);
-}
+// function movieFetch(url) {
+//   ghibliMoviesData(url);
+// }
 // ghibliMoviesData(url);
 // movieFetch(url);
 let createCard; //A variable to store the fetched data in once I manage to fetch it.

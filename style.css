@@ -298,8 +298,20 @@ img {
   }
 }
 
-.loadingIcon {
-  /* Add styling for loading icon */
+/* animation styling of the loading icon*/
+.loadSpin {
+  animation: spinSpin 3.5s linear infinite;
+  opacity: 0;
+}
+@keyframes spinSpin {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
 }
 
 /* Card styling for the card that appears when random movie and character buttons are clicked */
@@ -310,7 +322,7 @@ img {
   height: 28rem;
   border: 2px solid steelblue;
   border-radius: 10px;
-  padding: 0.6rem;
+  padding: 0.9rem;
 }
 
 /* Footer styling */

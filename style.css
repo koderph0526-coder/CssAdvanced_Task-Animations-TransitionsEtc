@@ -325,6 +325,33 @@ img {
   padding: 0.9rem;
 }
 
+/* listBtn styling */
+.listBtn {
+  width: 8rem;
+  height: 2rem;
+  background-color: #e6ffff;
+  border: 2px solid lightblue;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+  transition-property: background-color, border;
+  transition-duration: 0.3s;
+}
+
+.listBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 6px #5c795c;
+  background-color: #c2fbfb;
+  border: 3px #5b7a7a solid;
+  cursor: pointer;
+}
+/* Js div - grid styling for the cards */
+.divGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
 /* Footer styling */
 .lineBreak {
   margin: 0.4rem 0;

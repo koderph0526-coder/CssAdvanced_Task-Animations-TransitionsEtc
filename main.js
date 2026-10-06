@@ -21,8 +21,8 @@ movieBtnR.addEventListener("click", (e) => {
   const loadTxt = document.createElement("p");
   const loadingTxt = document.createTextNode("Loading, please wait");
   loadTxt.append(loadingTxt);
-  flowerCont.append(loadingImg);
-  flowerCont.append(loadTxt);
+  flowerCont.appendChild(loadingImg);
+  flowerCont.appendChild(loadTxt);
   setTimeout(() => {
     // loadingImg.classList.remove("loadSpin");
     flowerCont.remove(loadingImg);
@@ -31,10 +31,25 @@ movieBtnR.addEventListener("click", (e) => {
 
   // think easiest thing to do is load the element with a class toggle to the display + rotating class with a setTimeout for 3.5s
   setTimeout(() => {
-    ghibliMoviesData(url);
+    // ghibliMoviesData(url);
     // const randomMovIndex = Math.floor(Math.random() * films.length);
     // const randomMovie = [randomMovIndex];
   }, 3000); // Setting it to load for 4 seconds for now, will probably shorten it once I see how much time I need for my little loading animation
+  // Add a button to clcik that gives the full list below the card?
+  const listCont = document.querySelector("#fullList"); //Fetching the tag to append the list to
+  const movListBtn = document.createElement("button");
+  movListBtn.className = "listBtn";
+  const listBtnTxt = document.createTextNode("View all movies");
+  movListBtn.append(listBtnTxt);
+  listCont.appendChild(movListBtn);
+
+  movListBtn.addEventListener("click", (e) => {
+    ghibliMoviesData(url);
+    // Add grid styling
+    const gridDiv = document.createElement("div");
+    gridDiv[className] = "divGrid";
+    gridDiv.append(randMovContCard);
+  });
 });
 
 async function ghibliMoviesData(url) {
@@ -82,6 +97,7 @@ async function ghibliMoviesData(url) {
       divCont.appendChild(releaseD);
       divCont.appendChild(runTime);
       randMovContCard.append(divCont);
+      return randMovContCard;
     });
     const createCard = {}; // Had to make this into an empty array to place the items into
     createCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.

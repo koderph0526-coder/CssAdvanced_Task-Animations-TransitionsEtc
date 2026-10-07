@@ -14,7 +14,7 @@ Due **_Sunday_** by 11:59pm (04.10.26)
 -Canvas linkt to the assignment:
 'https://jobloop.instructure.com/courses/557/assignments/11020'
 
-Jump straight to the [Js Task](#js-tasks)
+Jump to the [Js Task](#js-tasks)
 
 COMMENT: As the Js task to use an API that I had in mind fell through, I am considering combining these two tasks into one. Meaning I'll add the task goals, demands and task segments below the Css ones if I do this.
 

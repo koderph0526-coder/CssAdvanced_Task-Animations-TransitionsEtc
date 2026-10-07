@@ -314,15 +314,23 @@ img {
   }
 }
 
-/* Card styling for the card that appears when random movie and character buttons are clicked */
+/* Card that appears when random movie and character buttons are clicked */
 .randoResCard {
   background-color: #c5ecf9;
   margin: 3rem 0;
-  width: 21rem;
-  height: 28rem;
+  width: 26rem;
+  min-height: 38rem;
   border: 2px solid steelblue;
   border-radius: 10px;
   padding: 0.9rem;
+}
+.randoResCard > div {
+  row-gap: 1rem;
+}
+
+.cardImg {
+  width: 50%;
+  margin: 0.5rem 5.5rem;
 }
 
 /* listBtn styling */
@@ -332,13 +340,13 @@ img {
   background-color: #e6ffff;
   border: 2px solid lightblue;
   border-radius: 10px;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.25s ease-in-out;
   transition-property: background-color, border;
   transition-duration: 0.3s;
 }
 
 .listBtn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   box-shadow: 4px 4px 6px #5c795c;
   background-color: #c2fbfb;
   border: 3px #5b7a7a solid;

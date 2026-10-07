@@ -6,24 +6,19 @@ const movieBtnR = document.querySelector("#movieBtnRnd");
 const charBtnR = document.querySelector("#charBtnRnd");
 const randMovContCard = document.querySelector(".movieCardCont");
 
-// console.log(urlFilms);
-// console.log(urlGhibliPeople);
-let movie = [];
+let movies = [];
 
 async function ghibliMoviesData(url) {
-  // let randomFilm = Math.floor(Math.random);
   try {
     const res = await fetch(url);
     const data = await res.json();
     const films = await data;
     films.forEach((film) => {
-      movie.push(film);
-      // console.log(movie);
-      // console.log(`${film.title} `);
+      movies.push(film);
       // console.log(`${film.original_title}`); //checking connection
     });
-    const createdCard = {};
-    createdCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.
+    // const createdCard = {}; // Think I don't need this? Keeping it for className note for now.
+    // createdCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.
   } catch (err) {
     console.error(err);
   }
@@ -45,6 +40,7 @@ function cardCreate(data) {
   imgM.src = data.image; //No?
   console.log(imgM);
   const figure = document.createElement("figure");
+  figure["className"] = "cardImg";
   figure.append(imgM);
   const movieDescript = document.createElement("p");
   const movDescrTxt = document.createTextNode(data.description);
@@ -69,7 +65,7 @@ function cardCreate(data) {
   randMovContCard.append(divCont);
 }
 
-//logic to check for card -> remove ifcontent is present
+//logic to check for card -> remove if content is present
 function cardCheck() {
   //Checking if there is "children"/content in the variable
   if (randMovContCard.innerHTML != "") {
@@ -82,35 +78,34 @@ function cardCheck() {
 
 //Random button listener
 movieBtnR.addEventListener("click", (e) => {
-  cardCheck();
-  // Adjusting a set loadingtime that also allows for a loading icon to be displayed
+  cardCheck(); // Checking if the card is empty
   const flowerCont = document.querySelector("#flowerSpin"); //fetching the tag I want to append the created js element into
-  // creating the img element and adding a class that also has keyframe animation attached
-  const loadingImg = document.createElement("img");
+  const loadingImg = document.createElement("img"); // creating the img element + assigning a class w/keyframes
   loadingImg.src = "/icons/sakura.png";
   loadingImg.className = "loadSpin";
-  //Adding text
-  const loadTxt = document.createElement("p");
+  const loadTxt = document.createElement("p"); //Adding text
   const loadingTxt = document.createTextNode("Loading, please wait");
+  //Appending to html
   loadTxt.append(loadingTxt);
   flowerCont.appendChild(loadingImg);
   flowerCont.appendChild(loadTxt);
   setTimeout(() => {
-    flowerCont.remove(loadingImg); // NB: remove will remove parent element here removeChild should be used so the tag doesnt disapear
-    flowerCont.remove(loadTxt); // NB: remove will remove parent element here removeChild should be used so the tag doesnt disapear
-  }, 2800); // removing the loading icon on a set time
+    flowerCont.removeChild(loadingImg); // NB: remove will remove parent element here removeChild should be used so the tag doesnt disapear -L
+    flowerCont.removeChild(loadTxt); // NB: remove will remove parent element here removeChild should be used so the tag doesnt disapear -L
+  }, 1500); // removes after 1.5s
 
   // think easiest thing to do is load the element with a class toggle to the display + rotating class with a setTimeout for 3.5s
   setTimeout(() => {
     // ghibliMoviesData(url);
-    const randomMovIndex = Math.floor(Math.random() * movie.length);
-    console.log(movie[randomMovIndex]);
-    cardCreate(movie[randomMovIndex]);
-  }, 3000); // 3s time limiter
-  // Add a button to clcik that gives the full list below the card?
-  listCreate(); //Callback to avoid overcomplicating one function - sompler logic
+    const randomMovIndex = Math.floor(Math.random() * movies.length);
+    // console.log(movies[randomMovIndex]);
+    cardCreate(movies[randomMovIndex]);
+  }, 1700); // 1.7s time limiter for smooth overlap
+  // add the button only after asking for random movie -> Use same logic as cardCheck to avoid multiplying?
+  listCreate(); //Callback to avoid overcomplicating one function - simpler logic
 });
-// Function, applied on the button activated when clicked, that fetches full list
+
+// Fetches full list, applied to the button - activated when clicked.
 function listCreate() {
   const listCont = document.querySelector("#fullList"); //Fetching the tag to append the list to
   const movListBtn = document.createElement("button");
@@ -120,8 +115,10 @@ function listCreate() {
   listCont.appendChild(movListBtn);
 
   movListBtn.addEventListener("click", (e) => {
-    ghibliMoviesData(url);
-    films.forEach((film) => {});
+    // ghibliMoviesData(url);
+    movies.forEach((film) => {
+      randMovContCard[film];
+    });
     // apiFetch and cardCreate()?
     // Add grid styling
     const gridDiv = document.createElement("div");
@@ -130,13 +127,8 @@ function listCreate() {
   });
 }
 
-// function movieFetch(url) {
-//   ghibliMoviesData(url);
-// }
-// ghibliMoviesData(url);
-// movieFetch(url);
-let createCard; //A variable to store the fetched data in once I manage to fetch it.
+// let createCard; //A variable to store the fetched data in once I manage to fetch it.
 
 //Set limit of movies to fetch width "https://ghibliapi.vercel.app/films?limit=250" --> Am asking for max, to keep in mind that they'll likely add more movies over time.
-// NOTE: This may be more complex than I thought, think I can do it at some point, but perhaps not in time for the deadline...
-// Logic work to get seach to function: fetch all films info, in this case title, store in a variable call allGhibliFilms and run the array throught a loop for each search to let it match the title.
+// NOTE: The search function may be more complex than I thought, think I can do it at some point, but perhaps not in time for the deadline...
+// Logic work(?) to get search to function: fetch all films info, in this case title, store in a variable call allGhibliFilms and run the array throught a loop for each search to let it match the title.

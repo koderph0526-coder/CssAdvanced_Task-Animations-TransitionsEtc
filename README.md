@@ -5,6 +5,8 @@ Due **_Thursday_** by 11:59pm (01.10.26)
 - Canvas link to the assignment:
   'https://jobloop.instructure.com/courses/557/assignments/10965'
 
+Jump to the [Css Task](#css-task)
+
 # & Javascript Advanced Oppgave 3: API-oppgave
 
 Due **_Sunday_** by 11:59pm (04.10.26)
@@ -12,7 +14,22 @@ Due **_Sunday_** by 11:59pm (04.10.26)
 -Canvas linkt to the assignment:
 'https://jobloop.instructure.com/courses/557/assignments/11020'
 
+Jump straight to the [Js Task](#js-tasks)
+
 COMMENT: As the Js task to use an API that I had in mind fell through, I am considering combining these two tasks into one. Meaning I'll add the task goals, demands and task segments below the Css ones if I do this.
+
+### Comment 07.10.26:
+
+Still have a ways to go, but the proof of concept is getting there. Need to:
+
+- movListBtn Needs to function/fetch all the movies and place in grid -> fix []
+- Repeat cardCreate, but fetch characters from the movies instead! []
+- Fix it so the "View all movies" button doesn't load everytime a user asks for a random movie []
+  (Think this could be done by pulling it out the random button function and rather making a check-if the button has been clicked? Possibly just use the same logic as cardCheck?)
+- Adjust some css for the randomCard And full list cards []
+- Clean Up comments, is too much I know... []
+- Still need description to images/icons used []
+- Still want to make a functional search function []
 
 ## Css task:
 
@@ -76,7 +93,7 @@ Lag et interaktivt meny- eller kort-design som bruker en kombinasjon av animasjo
 For å sikre at du utfordrer deg selv, må prosjektet ditt inkludere en viss grad av kompleksitet, for eksempel:
 
 1. Et API med flere ulike endepunkter som du bruker i prosjektet ditt. []
-2. Et API med et endepunkt som aksepterer parametere i URL-en. []
+2. Et API med et endepunkt som aksepterer parametere i URL-en. [] (???)
 3. API-data som må kjøres gjennom en løkke for å hente/generere innhold. []
 
 Prosjektet ditt må oppfylle minst **to** av disse kriteriene.
@@ -100,9 +117,11 @@ Tidligere studenter hos Kodehode har hatt suksess med å bruke API-er som dette 
 - I also want to add a button that asks if the used would like a full list of Ghibli movies, and when said button had been pressed and the list is printed I also want js reveal another "button", in all honesty a selction/option field that allows the user to sort the movies alphabetically, by airing/release date and by length, as well as the reverse options for each of those sorting options
 - ! NOTE: I want to add an icon that's spinning slowly, I'm thinking a sakura flower or an umbrella, that only appear while the api is being asked to fetch data and print it.
 
-## Must do!:
+## Must do!: (Note to self really)
 
-- Comments!!!!
-- Add description to img!
-- Clean up css -> DRY; DRY; DRY!!
-- Fix the JS and append!!
+- Comments!!!! -> cleanUP []
+- Add description to img! []
+- Clean up css -> DRY; DRY; DRY!! []
+- Fix the JS(almost there) [] and append!! [x]
+
+!! Search regEx to find solutions for the search field to accept input, use filter and include methods to sort/compare with movie titles.

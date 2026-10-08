@@ -20,7 +20,7 @@ async function ghibliMoviesData(url) {
     // const createdCard = {}; // Think I don't need this? Keeping it for className note for now.
     // createdCard.className = "centerCenter"; //Hot tip from Mikkel: is more widely acceptible to use [], see example below and adhere this from here on.
   } catch (err) {
-    console.error(err);
+    console.error(err, "API not found");
   }
 }
 ghibliMoviesData(url);
@@ -37,7 +37,7 @@ function cardCreate(data) {
   const jpnTitleTxt = document.createTextNode(data.original_title);
   jpnTitle.append(jpnTitleTxt);
   const imgM = document.createElement("img");
-  imgM.src = data.image; //No?
+  imgM.src = data.image;
   console.log(imgM);
   const figure = document.createElement("figure");
   figure["className"] = "cardImg";
@@ -90,8 +90,8 @@ movieBtnR.addEventListener("click", (e) => {
   flowerCont.appendChild(loadingImg);
   flowerCont.appendChild(loadTxt);
   setTimeout(() => {
-    flowerCont.removeChild(loadingImg); // NB: remove will remove parent element here removeChild should be used so the tag doesnt disapear -L
-    flowerCont.removeChild(loadTxt); // NB: remove will remove parent element here removeChild should be used so the tag doesnt disapear -L
+    flowerCont.removeChild(loadingImg); // NB: remove will remove parent element here removeChild should be used so the tag doesnt disapear -Leah
+    flowerCont.removeChild(loadTxt); // NB: remove will remove parent element here removeChild should be used so the tag doesnt disapear -Leah
   }, 1500); // removes after 1.5s
 
   // think easiest thing to do is load the element with a class toggle to the display + rotating class with a setTimeout for 3.5s
@@ -101,31 +101,42 @@ movieBtnR.addEventListener("click", (e) => {
     // console.log(movies[randomMovIndex]);
     cardCreate(movies[randomMovIndex]);
   }, 1700); // 1.7s time limiter for smooth overlap
-  // add the button only after asking for random movie -> Use same logic as cardCheck to avoid multiplying?
+  // add  listButton only after asking for random movie -> Use same logic as cardCheck to avoid multiplying?
   listCreate(); //Callback to avoid overcomplicating one function - simpler logic
 });
 
+//fetching dataset on a random character and displays in a card
+charBtnR.addEventListener("click", (e) => {
+  cardCheck();
+  // Add different loading animtaion? Or make the sakura one reusable?
+});
+
 // Fetches full list, applied to the button - activated when clicked.
+const movListBtn = document.createElement("button");
 function listCreate() {
   const listCont = document.querySelector("#fullList"); //Fetching the tag to append the list to
-  const movListBtn = document.createElement("button");
   movListBtn.className = "listBtn";
   const listBtnTxt = document.createTextNode("View all movies");
   movListBtn.append(listBtnTxt);
   listCont.appendChild(movListBtn);
 
-  movListBtn.addEventListener("click", (e) => {
-    // ghibliMoviesData(url);
-    movies.forEach((film) => {
-      randMovContCard[film];
-    });
-    // apiFetch and cardCreate()?
-    // Add grid styling
-    const gridDiv = document.createElement("div");
-    gridDiv[className] = "divGrid";
-    gridDiv.append(randMovContCard);
-  });
+  // apiFetch and cardCreate()?
+  // Add grid styling
+  //btn reaction -> show full list
 }
+movListBtn.addEventListener("click", (e) => {
+  // ghibliMoviesData(url);
+  cardCreate(movies);
+  movies.forEach((film) => {
+    // if(film.imgM || film.figure){
+    //   continue;
+    // } Ok so not this, how to get it to skip imgs?
+    randMovContCard[film];
+  });
+  const gridDiv = document.createElement("div");
+  gridDiv["className"] = "divGrid";
+  gridDiv.append(randMovContCard);
+});
 
 // let createCard; //A variable to store the fetched data in once I manage to fetch it.
 

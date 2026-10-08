@@ -106,8 +106,13 @@ movieBtnR.addEventListener("click", (e) => {
 });
 
 //fetching dataset on a random character and displays in a card
+let characters = {}
 charBtnR.addEventListener("click", (e) => {
   cardCheck();
+  // Add empty array stored in varaible(character) outisde of the function then use if to check if it's using the character var 
+    // if(? === character){
+    //   continue;
+    // } Ok so not this, how to get it to skip imgs?
   // Add different loading animtaion? Or make the sakura one reusable?
 });
 
@@ -128,9 +133,6 @@ movListBtn.addEventListener("click", (e) => {
   // ghibliMoviesData(url);
   cardCreate(movies);
   movies.forEach((film) => {
-    // if(film.imgM || film.figure){
-    //   continue;
-    // } Ok so not this, how to get it to skip imgs?
     randMovContCard[film];
   });
   const gridDiv = document.createElement("div");
